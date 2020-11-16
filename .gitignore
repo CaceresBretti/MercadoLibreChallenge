@@ -1,3 +1,4 @@
 /node_modules
 /front/node_modules
 /api/node_modules
+/front/src/__tests__/__snapshots__

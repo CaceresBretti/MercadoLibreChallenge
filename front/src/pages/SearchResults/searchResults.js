@@ -56,6 +56,7 @@ export const SearchResultsPage = () => {
                                                 title={item.title}
                                                 picture={item.picture}
                                                 price={item.price}
+                                                free_shipping={item.free_shipping}
                                             />
                                         </Link>
                                     )

@@ -7,7 +7,7 @@ export const Breadcrumbs = (props) => {
     return (
         <div className="row breadcrumb">
             <ul>
-                {categories.map((category) => {
+                {categories && categories.length > 0 && categories.map((category) => {
                     return (
                         <li key={category}><Link to={`/items?search=${category}`}>{category}</Link></li>
                     )

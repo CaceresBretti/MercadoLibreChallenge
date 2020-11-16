@@ -21,6 +21,17 @@
         margin-right: 8px;
         line-height: 1.25;
         margin: 0;
+
+        span {
+            margin-left: 5px;
+            
+            i {
+                font-size: 16px;
+                color: green;
+               
+
+            }
+        }
     }
 
     &:hover {
