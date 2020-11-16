@@ -1,0 +1,20 @@
+{
+  "name": "meli-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev:api": "cd api && nodemon --exec babel-node index.js",
+    "dev:client": "cd front && npm start",
+    "doc:client": "cd front && npm run storybook",
+    "install:api": "cd api && npm install",
+    "install:client": "cd front && npm install",
+    "dev:install": "concurrently \"npm run install:api\" \"npm run install:client\"",
+    "start": "concurrently \"npm run dev:api\" \"npm run dev:client\""
+  },
+  "dependencies": {
+    "nodemon": "2.0.6",
+    "concurrently": "5.3.0"
+  },
+  "author": "Marcel Cáceres Bretti",
+  "license": "ISC"
+}
