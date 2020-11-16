@@ -17,7 +17,7 @@ export const SearchResultsPage = () => {
     const [items, setItems] = useState([]);
     const [categories, setCategories] = useState([]);
 
-    const { loading, data } = useFetch(url, 'GET', callApi, true);
+    const { loading, data, error } = useFetch(url, 'GET', callApi, true);
 
     useEffect(() => {
         if (query.search) {
@@ -45,6 +45,7 @@ export const SearchResultsPage = () => {
             <Header />
             <main>
                 <div className="container">
+                    {error && <div className="error">Ocurrió un error al obtener la búsqueda</div>}
                     {loading ? <Preloader /> :
                         <>
                             <Breadcrumbs categories={categories} />

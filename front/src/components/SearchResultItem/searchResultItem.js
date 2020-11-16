@@ -12,16 +12,17 @@ export const SearchResultItem = (props) => {
                 <img src={picture} alt={title} title={title} />
             </div>
             <div className="col-9">
-                {price && price.currency && price.amount && price.decimals
-                    && <h4 className="price" title="Precio">
-                        <NumberFormat prefix={price.currency + ' $'}
-                            displayType="text" value={price.amount}
-                            thousandSeparator="."
-                            decimalSeparator={false}
-                            decimalScale={price.decimals}
-                        />
-                        {free_shipping && <span><i title="Envio gratis" class="fa fa-truck"></i></span>}
-                    </h4>}
+
+                <h4 className="price" title="Precio">
+                    <NumberFormat prefix={price.currency + ' $'}
+                        displayType="text"
+                        value={price.amount}
+                        thousandSeparator="."
+                        decimalSeparator=","
+                        decimalScale={price.decimals}
+                    />
+                    {free_shipping && <span><i title="Envio gratis" className="fa fa-truck"></i></span>}
+                </h4>
 
                 <h5 className="title" title={title}>{title}</h5>
             </div>

@@ -15,7 +15,7 @@ export const DetailPage = () => {
     const [callApi, setCallApi] = useState(false);
     const [item, setItem] = useState();
 
-    const { loading, data } = useFetch(url, 'GET', callApi, true);
+    const { loading, data, error } = useFetch(url, 'GET', callApi, true);
     const { query } = useRouter();
 
 
@@ -43,6 +43,7 @@ export const DetailPage = () => {
             <Header />
             <main>
                 <div className="container">
+                    {error && <div className="error">Ocurrió un error al obtener este item</div>}
                     {loading ? <Preloader /> :
                         item && <>
                             {query.category && <Breadcrumbs categories={[query.category, item.title]} />}

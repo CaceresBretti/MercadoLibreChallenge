@@ -6,10 +6,9 @@ import cors from 'cors';
 import httpStatus from 'http-status';
 import expressValidation from 'express-validation';
 import helmet from 'helmet';
-import { config } from '../config/config'
-
 import routes from '../server/routes/index.route';
 import APIError from '../server/helpers/APIError';
+
 
 const app = express();
 
@@ -26,10 +25,7 @@ app.use(helmet());
 
 app.use(cors());
 
-
 const baseUrl = `/api`;
-
-
 app.use(`${baseUrl}`, routes);
 
 
@@ -50,5 +46,8 @@ app.use((req, res, next) => {
     const err = new APIError('API not found', httpStatus.NOT_FOUND);
     return next(err);
 })
+
+
+
 
 export default app;

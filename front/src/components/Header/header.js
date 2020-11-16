@@ -7,7 +7,7 @@ export const Header = () => {
         <header className="header">
             <div className="container">
                 <div className="row">
-                    <div className="col-1">
+                    <div className="col-1 logo">
                         <img src={logo} alt="Mercado Libre" title="Mercado Libre" />
                     </div>
                     <div className="col-11">
