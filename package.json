@@ -6,6 +6,7 @@
     "dev:api": "cd api && nodemon --exec babel-node index.js",
     "dev:client": "cd front && npm start",
     "doc:client": "cd front && npm run storybook",
+    "test:client": "cd front && npm run test",
     "install:api": "cd api && npm install",
     "install:client": "cd front && npm install",
     "dev:install": "concurrently \"npm run install:api\" \"npm run install:client\"",
