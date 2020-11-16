@@ -1,0 +1,19 @@
+.header {
+    background-color: #fff159;
+    min-height: 56px;
+    box-shadow:  1px 0 0 rgba(0,0,0,.1);
+
+    input[type=text] {
+        padding: 6px;
+        font-size: 17px;
+        border: none;
+        width: calc(100% - 48px);
+    }   
+    button {
+        padding: 6px 10px;
+        background: #ddd;
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+    }
+}
