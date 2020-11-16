@@ -10,8 +10,16 @@ Correr los siguientes comandos en orden:
 
 ```
 npm install
-npm run install:dev
+npm run dev:install
 npm start
+```
+
+#### Documentación
+
+Para abrir la documentación del front
+
+```
+npm run doc:client
 ```
 
 
